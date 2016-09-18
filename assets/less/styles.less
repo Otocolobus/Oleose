@@ -86,6 +86,13 @@ header {
     }
 }
 
+.main-image {
+  border: 2px solid;
+  padding: 20px;
+  border-radius: 20px;
+  background: black;
+}
+
 .scrollpoint {
     opacity: 0;
     &.active{
@@ -413,19 +420,12 @@ section {
     }
 }
 
-.tp-caption {
-    font-family: @font-stack !important;
-    -webkit-font-smoothing: antialiased;
-    &.large_white_bold {
+    .large_white_bold {
         color:@white;
         font-size:65px;
         font-weight: 400;
     }
-    &.large_white_light {
-        .large_white_bold();
-        font-weight: 300;
-    }
-}
+
 .btn {
     .rounded-corners(3em);
     .box-shadow-me(none);
@@ -467,7 +467,14 @@ form {
     }
 }
 
-
+header{
+    .navbar-default{
+        position: relative;
+        &.scrolled {
+            position: fixed;
+        }
+    }
+}
 
 @media screen and (max-width: 640px) {
 	.logo{

@@ -43,56 +43,19 @@ var appMaster = {
     screensCarousel: function() {
         // Screens Carousel
         $('.filtering').slick({
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            dots: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true,
             responsive: [{
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
-            }, {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
             }]
         });
-
-        $('.js-filter-all').on('click', function() {
-            $('.filtering').slickUnfilter();
-            $('.filter a').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $('.js-filter-one').on('click', function() {
-            $('.filtering').slickFilter('.one');
-            $('.filter a').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $('.js-filter-two').on('click', function() {
-            $('.filtering').slickFilter('.two');
-            $('.filter a').removeClass('active');
-            $(this).addClass('active');
-        });
-
-        $('.js-filter-three').on('click', function() {
-            $('.filtering').slickFilter('.three');
-            $('.filter a').removeClass('active');
-            $(this).addClass('active');
-        });
-
     },
 
     animateScript: function() {
